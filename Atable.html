@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>table</title>  
+    <style>  
+        table{  
+            border-collapse: collapse;  
+            width: 100%;   
+        }  
+    th,td{  
+        border: 5px solid black;   
+        padding: 15px;  
+    }
+      
+a{
+  background-color: white;
+  border: 1px solid white;
+}
+a:visited {
+  background-color: yellow;
+  border-color: hotpink;
+  color: hotpink;
+}
+a:hover{
+    color: black;
+}  
+    </style>  
+  </head>  
+<body>
+      
+<table BORDER="2" CELLPADDING="2" WIDTH="100%">  
+    <tr onMouseover="this.bgColor='green'"onMouseout="this.bgColor='#FFFFFF'">  
+        <th>1 header</th>  
+        <th>1 header</th>  
+        <th>1 header</th>  
+    </tr>  
+    <tr>  
+        <td onMouseover="this.bgColor='red'"onMouseout="this.bgColor='#FFFFFF'">1data</td>  
+        <td onMouseover="this.bgColor='red'"onMouseout="this.bgColor='#FFFFFF'">1data</td>  
+        <td onMouseover="this.bgColor='red'"onMouseout="this.bgColor='#FFFFFF'">1data</td>  
+    </tr>  
+    <tr>  
+        <td onMouseover="this.bgColor='blue'"onMouseout="this.bgColor='#FFFFFF'">2 data</td>  
+        <td onMouseover="this.bgColor='blue'"onMouseout="this.bgColor='#FFFFFF'">2 data</td>  
+        <td onMouseover="this.bgColor='blue'"onMouseout="this.bgColor='#FFFFFF'">2 data</td>  
+    </tr>  
+    <tr>  
+        <td onMouseover="this.bgColor='yellow'"onMouseout="this.bgColor='#FFFFFF'">3 data</td>  
+        <td onMouseover="this.bgColor='yellow'"onMouseout="this.bgColor='#FFFFFF'">3 data</td>  
+        <td onMouseover="this.bgColor='yellow'"onMouseout="this.bgColor='#FFFFFF'">3 data</td>  
+    </tr>
+   
+</td>  
+</table><br><br>
+<a href="#test-visited-link">Have you visited this link yet?</a><br>
+<a href="">You've already visited this link.</a><br><br>
+<p>Back to Home<a href="index.html"> here.</a></p>
+</body>  
+</html>  

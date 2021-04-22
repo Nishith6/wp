@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Form</title>
+
+    <link rel="stylesheet" href="jsform.css">
+</head>
+<body>
+
+    <form class="container" method="GET"  onsubmit="alert('Succesfully Submited.!!')">
+        <h1>Registration Form</h1>
+        <hr>
+
+        <label for="fname"><b>Full Name</b></label>
+        <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" pattern="[A-Za-z]+" required>
+        <br>
+
+        <label for="lname"><b>User Name</b></label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" pattern="[A-Za-z]+" required>
+        <br>
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+        <br>
+
+        <label for="phone"><b>Phone</b></label><br>
+        <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone Number" maxlength="10" required>
+        <br>
+        
+        <label for="gender"><b>Gender</b></label>
+        <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+        <input type="radio" name="gender" id="other">
+            <label for="other">Other</label>
+        <br>
+
+        <label for="hobby"><b>Hobby</b></label>
+        <input type="checkbox" name="hobby1" id="hobby1">
+            <label for="hobby1">Cricket</label>
+        <input type="checkbox" name="hobby2" id="hobby2">
+            <label for="hobby2">Hockey</label>
+        <input type="checkbox" name="hobby3" id="hobby3">
+            <label for="hobby3">Kabbadi</label>
+        <br><br>
+        
+        <label for="current_add"><b>Current Address</b></label>
+        <textarea name="current_add" id="current_add" cols="30" rows="10" placeholder="Enter Your Address" required></textarea>
+        <br>
+
+        <input type="checkbox" name="current_same" id="current_same" onclick="check()">
+        <label for="current_same"> Same as above </label>
+        <br><br>
+
+        <label for="permanent_add"><b>Permanant Address</b></label>
+        <textarea name="permanent_add" id="permanent_add" cols="30" rows="10" placeholder="Enter Your Address" required></textarea>
+        <br>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="pwd" id="pwd" placeholder="Enter Your Password" minlength="5" required>
+        <br>
+
+        <input type="checkbox" name="approve" id="approve" required>
+        <label for="approve"> &nbsp; I accept to the <a href="">Terms & Conditions</a></label>
+        <br>
+
+        <input type="reset" class="resetbtn" value="Reset" id="reset">
+        <input type="submit" class="registerbtn" value="Submit" id="submit"> 
+
+    </form>
+    <div class="my-info" style="margin:5px; color:black">
+        <h3>Nishith Patel</h3>
+        <h3>180020107045</h3>
+        <p>Back to Home<a href="index.html"> here.</a></p>
+    </div>
+    <script>
+        function check() {
+
+            var current_add = document.getElementById('current_add');
+            var permanent_add = document.getElementById('permanent_add');
+            var current_same = document.getElementById('current_same');
+
+            if (current_same.checked == true) {
+                permanent_add.value = current_add.value;
+                permanent_add.disabled = true;
+            } 
+            else {
+                permanent_add.disabled = false;
+            }
+        } 
+        
+    </script>
+</body>
+</html>
+
+
+

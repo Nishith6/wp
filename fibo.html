@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<head>
+<title> Fibonacci</title>
+</head>
+<body style="text-align: center;background-color:rgba(0, 34, 128, 0.678)"> <!-- it is advised to not use inline styling -->
+<h2 style="text-align:center; color:white ;"> Program to generate the Fibonacci Series </h2>
+
+<script>
+
+var limit = prompt("Enter the Numbers to generate fibonacci series:", " ");
+var f1=0;
+var f2=1;
+
+document.write("Your Entered Number for fibonacci series is: ",limit, "<br><br>");
+document.write("The fibonacci series is: ");
+document.write("",f1," ");
+document.write("",f2," ");
+ 
+var i,f3;
+for(i=2; i<limit; i++)
+{
+	 f3=f1+f2;
+	 document.write("",f3," ");
+	 f1=f2;
+	 f2=f3;
+}
+</script>
+
+
+</body>
+</html>

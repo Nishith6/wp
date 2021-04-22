@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, iniyial-scale=1"> 
+<title>WEB PROGRAMMING</title> 
+<link rel="stylesheet" type="text/css" href="index.css">
+ 
+</head> 
+<body> 
+<header>
+  
+    <div class="main">
+        <div class="logo">
+            
+            <img src ='image/logo.png'>
+            <h2>Ahmedabad Institute of Technology</h2>
+        </div>
+    <div>
+        <ul> 
+            <li class="active"><a href="#">Lab Work</a></li>
+            <li><a href="class.html">Class Work</a></li>
+            <li><a href="#">About</a></li> 
+            <li><a href="#">Contact</a></li> 
+             
+        </ul>
+    </div>     
+    </div>
+    <div class="title">
+    <table onscroll="myFunction()">
+        <tr>
+          <th>NUMBER</th>
+          <th>LAB</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><p>A) Design a form for an online ticket booking system.<a href="tbooking.html">here.</a></p>
+            <p>B) Design a Registration form using HTML.<a href="rform.html">here.</a></p>
+            <p>C) Create a replica of the table,using HTML.<a href="table.html">here.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><p>A) Design a web page for a news site using an HTML Table that includes positioning,margin and padding properties of CSS.<a href="news.html">here.</a></p>
+            <p>B) Design an HTML+CSS page to understand the concept of pseudo classes.<a href="pseudo.html">here.</a></p>
+            <p>C) Design html page using css that changes color of the table cells on mouse hover. It should also change the colors of the links (default link/ link on mouse hover and visited link).<a href="Atable.html">here.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><p>A) Create a simple table with Bootstrap.<a href="Btable.html">here.</a></p>
+            <p>B) Create a list with Bootstrap.<a href="Blist.html">here.</a></p>
+            <p>C) Create buttons with Bootstrap.<a href="Bbutton.html">here.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><p>A) Perform complete form validation name, email, phone number, checkbox etc using JavaScript.<a href="jsform.html">here.</a></p>
+            <p>B) Design a login form using HTML & JavaScript with following validations on username and password fields.<a href="valiform.html">here.</a></p>
+            <p>C) Write a javascript program that prints first n Fibonacci numbers. Here n will be inserted by the user.<a href="fibo.html">here.</a></p>
+            <p>d) Write javascript code that displays the text”AHMEDABAD INSTITUTE OF TECHNOLOGY” with increasing font size in interval of 50ms in blue color.when font size reaches to 50px it should stop.<a href="Asize.html">here.</a></p>
+            <p>E) Write a javascript program for lighting bulb using different colors<a href="bulb.html">here.</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+</header> 
+<FOOTER STYLE="text-align:right;position: absolute;bottom: 0%;left: 0%">
+<div id="CounterVisitor">
+  <h2>Visitor</h2>
+</div> </FOOTER>
+<script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "You scrolled in div.";
+  }
+  var n = localStorage.getItem('on_load_counter');
+
+if (n === null) {
+  n = 0;
+}
+n++;
+
+localStorage.setItem("on_load_counter", n);
+
+nums = n.toString().split('').map(Number);
+document.getElementById('CounterVisitor').innerHTML = '';
+for (var i of nums) {
+  document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+}
+</script>
+</body> 
+</html>
+
+
+
+

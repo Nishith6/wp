@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="vali.css">
+</head>
+<body>
+    <form class="container" method="GET"  onsubmit="alert('Succesfully Submited.!!')">
+        <h1>Login Form</h1>
+        <hr>
+        
+        <label for="uname"><b>User Name</b></label><br>
+        <input type="text" name="uname" id="uname" placeholder="Enter User Name" pattern="[a-zA-Z0-9@_!#$%^&*]+" required>
+        <br>
+
+        <div id="validate_uname">
+            <p id="starting" class="valid_uname">Should not strat with _ or @ or numbers*</p>
+        </div>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="pwd" id="pwd" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+        <br>
+
+        <div id="validate">
+            <p id="lower" class="invalid">Contain a lowercase letters*</p>
+            <p id="capital" class="invalid">Contain a uppercase letters*</p>
+            <p id="num" class="invalid">Contain a numbers*</p>
+            <p id="length" class="invalid">Contain a minimum 6 characters*</p>
+        </div>
+		<label for="phone"><b>Phone Number</b></label>
+		<input type="text" name="phone" id="phone" placeholder="Phone Number" maxlength="10" required/><br>
+	
+		<input type="submit" value="Submit" id="submit"> 
+
+    </form>
+
+    <div class="my-info" style="margin:25px; color: white;">
+        <h3>Name : Nishith Patel</h3>
+        <h3>Enrollment : 180020107045</h3>
+		<h3 style="color: black;">Back to Home<a href="index.html"> here.</a></h3>
+    </div>
+
+
+
+
+	
+   <script>
+	   var pwd = document.getElementById("pwd");
+var lower = document.getElementById("lower");
+var capital = document.getElementById("capital");
+var num = document.getElementById("num");
+var length = document.getElementById("length");
+
+pwd.onfocus = function(){
+    document.getElementById("validate").style.display = "block";
+}
+
+pwd.onblur = function(){
+    document.getElementById("validate").style.display = "none";    
+}
+
+pwd.onkeyup = function(){
+    var lowerCase = /[a-z]/g;
+    if(pwd.value.match(lowerCase)) {  
+        lower.classList.remove("invalid");
+        lower.classList.add("valid");
+    } else {
+        lower.classList.remove("valid");
+        lower.classList.add("invalid");
+    }
+
+    var upperCase = /[A-Z]/g;
+    if(pwd.value.match(upperCase)) {  
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+    } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+    }
+
+    var number = /[0-9]/g;
+    if(pwd.value.match(number)) {  
+        num.classList.remove("invalid");
+        num.classList.add("valid");
+    } else {
+        num.classList.remove("valid");
+        num.classList.add("invalid");
+    }
+
+    if(pwd.value.length >= 6){
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+    }
+}
+
+var uname = document.getElementById("uname");
+var starting = document.getElementById("starting");
+uname.onfocus = function(){
+    document.getElementById("validate_uname").style.display = "block";
+}
+
+uname.onblur = function(){
+    document.getElementById("validate_uname").style.display = "none";    
+}
+
+var sign1 = "_";
+var sign2 = "@";
+var number = /[0-9]/g;
+
+uname.onkeyup = function(){
+    if(uname.value.charAt(0) === sign1 | uname.value.charAt(0) === (sign2) | uname.value.charAt(0).match(number)){
+        starting.classList.remove("valid_uname");
+        starting.classList.add("invalid_uname");
+    }
+    else {
+        starting.classList.remove("invalid_uname");
+        starting.classList.add("valid_uname");
+    }
+}
+   </script>
+
+</body>
+</html>

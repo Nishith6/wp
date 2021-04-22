@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, iniyial-scale=1"> 
+<title>Registration Form</title> 
+<link rel="stylesheet" type="text/css" href="rform.css"> 
+</head> 
+<body>
+<header>
+    <div class="main">
+        <div class="logo">
+            <img src ='image/logo.png'>
+            <h1>Ahmedabad Institute of Technology</h1>
+        </div>
+		<div>
+			<ul> 
+				<li class="active"><a href="#">Home</a></li> 
+				<li><a href="service.html">Service</a></li> 
+				<li><a href="#">About</a></li> 
+				<li><a href="#">Contact</a></li> 
+				<li><a href="sign.html">Register</a></li> 
+			</ul>
+		</div>
+       </div>
+       <div class="box">
+	
+		<div class="inner-box">
+		
+		<form action="thanks.html" method="post">
+		<h2>Registration Form</h2>
+		
+		<input type="text" name="First Name" placeholder="First Name" required/>
+		<input type="text" name="Last Name" placeholder="Last Name" required/>
+        <input type="text" name="Phone number" placeholder="Phone Number" maxlength="10" required/>
+		<input type="email" name="email" placeholder="Email Address" required/>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+		<input type="text" name="Address" placeholder="Address" required/>
+		<input type="submit" value="SignUp" />
+		
+		<p style="text-align:center;" >
+				<span>Already Register ? </span><a class="link" href="sign.html">Sign In</a>
+		</p>
+		
+		</form>
+		
+		</div>
+		
+	</div> 
+    <p style="padding-top: 680px; color: black;">Back to Home<a href="index.html"> here.</a></p>  
+</header>
+</body>
+</html>      
